@@ -84,3 +84,80 @@
 // }
 
 // }
+
+
+// void main(){
+//     final car =Car();
+//     print (car.noOfWheels);
+// }
+// class Vehicle {
+//     bool isEngineWorking = false;
+//     bool isLightOn = true;
+// }
+
+// class Car extends Vehicle {
+//     int noOfWheels = 4;
+
+//     void printSomething() {
+//         print(noOfWheels);
+//     }
+// }
+
+// class Truck implements Vehicle {
+//     bool isEngineWorking = false;
+//     bool isLightOn = true;
+//     int noOfWheels = 8;
+
+// void printSomething() {
+//         print("good job");
+//     }
+
+// }
+
+// void main(){
+//     Cow cow = Cow();
+//     cow.eat();
+// }
+// abstract class Animal {
+//     void eat();
+//     void move();
+// }
+//  class Cow implements Animal {
+//     @override
+//     void eat() {
+//         print('Cow is eating grass');
+//     }
+
+//     @override
+//     void move() {
+//         print('Cow is moving');
+//     }
+//  }
+
+abstract class Animal {
+  void makeSound() ;
+}
+
+class Cat extends Animal {
+  @override
+  void makeSound() {
+    print("Meow!");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print("Woof!");
+  }
+}
+void main() {
+ //you cannot do Animal animal = Animal();
+  Animal animal = Cat(); 
+  animal.makeSound();    
+  
+  animal = Dog();        
+  animal.makeSound();    
+}
+
+
