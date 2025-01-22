@@ -160,25 +160,69 @@
 //   animal.makeSound();    
 // }
 
- void main(){
-   Animal animal=Animal();
-    animal.move();
-    animal.moves();
- }
-  mixin jump{
-    int height=10; 
-  }
-   mixin eat{
-    bool isHungry=true;
-  }
+//  void main(){
+//    Animal animal=Animal();
+//     animal.move();
+//     animal.moves();
+//  }
+//   mixin jump{
+//     int height=10; 
+//   }
+//    mixin eat{
+//     bool isHungry=true;
+//   }
 
-class Animal with jump,eat{
-  void move(){
-    print(height);
-  }
-  void moves(){
-    print(isHungry);
-  }
+// class Animal with jump,eat{
+//   void move(){
+//     print(height);
+//   }
+//   void moves(){
+//     print(isHungry);
+//   }
   
+// }
+
+//void main(){
+//Animal(); cannot do in seal class
+//animal1();
+//}
+
+//sealed class Animal{}
+//final class animal1{}
+/*base =cannot use implements
+interface=no extends no with
+ mixin=required mixin
+final=cannot inherite
+*/
+
+void main(){
+    List <student /*object*/> students = [
+        student('samip',20),
+        student('samita',30),
+    ];
+students.add(student('sita',40));
+students.insert(0,student('gita',50));
+    print (students[0].name);
+
+    
+    for(int n=0;n<students.length;n++){
+        var grade;
+        if(grade>30){
+            print(students[n].name);
+        }
+    }
 }
+class student{
+    String name;
+    
+      var grade;
+    student(this.name,this.grade);
+    String tostring()=>'student=$name';
+}
+
+
+
+
+
+
 
