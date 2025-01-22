@@ -134,30 +134,51 @@
 //     }
 //  }
 
-abstract class Animal {
-  void makeSound() ;
-}
+// abstract class Animal {
+//   void makeSound() ;
+// }
 
-class Cat extends Animal {
-  @override
-  void makeSound() {
-    print("Meow!");
-  }
-}
+// class Cat extends Animal {
+//   @override
+//   void makeSound() {
+//     print("Meow!");
+//   }
+// }
 
-class Dog extends Animal {
-  @override
-  void makeSound() {
-    print("Woof!");
-  }
-}
-void main() {
- //you cannot do Animal animal = Animal();
-  Animal animal = Cat(); 
-  animal.makeSound();    
+// class Dog extends Animal {
+//   @override
+//   void makeSound() {
+//     print("Woof!");
+//   }
+// }
+// void main() {
+//  //you cannot do Animal animal = Animal();
+//   Animal animal = Cat(); 
+//   animal.makeSound();    
   
-  animal = Dog();        
-  animal.makeSound();    
-}
+//   animal = Dog();        
+//   animal.makeSound();    
+// }
 
+ void main(){
+   Animal animal=Animal();
+    animal.move();
+    animal.moves();
+ }
+  mixin jump{
+    int height=10; 
+  }
+   mixin eat{
+    bool isHungry=true;
+  }
+
+class Animal with jump,eat{
+  void move(){
+    print(height);
+  }
+  void moves(){
+    print(isHungry);
+  }
+  
+}
 
