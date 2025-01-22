@@ -197,27 +197,29 @@ final=cannot inherite
 
 void main(){
     List <student /*object*/> students = [
-        student('samip',20),
-        student('samita',30),
+        student('samip',30),
+        student('samita',40),
+        student('sabin',50),
+        student('sabina',60),
     ];
-students.add(student('sita',40));
-students.insert(0,student('gita',50));
-    print (students[0].name);
+print((students));
+    // List <student>stud =[];
+    // for (var i=0;i<students.length;i++){
+    //     if (students[i].marks>=40){
+    //         stud.add(students[i]);
 
-    
-    for(int n=0;n<students.length;n++){
-        var grade;
-        if(grade>30){
-            print(students[n].name);
-        }
-    }
+    //     }
+    // }
+    //print(stud);
+  
+  var stud=students.where ((student)=>student.marks>=40);
+    print(stud);
 }
 class student{
     String name;
-    
-      var grade;
-    student(this.name,this.grade);
-    String tostring()=>'student=$name';
+    int marks;
+    student(this.name,this.marks);
+    String toString()=>'student=$name';
 }
 
 
