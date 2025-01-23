@@ -229,26 +229,36 @@ final=cannot inherite
 //     String toString()=>'student=$name';
 // }
 
+import 'dart:math';
+
 void main(){
-    
-   Map< String, int> students={
-         'samip':30,
-         'samita':40,
-         'sabin':50,
-         'sabina':60,
-         
-   };
-    print(students['samip']);
-    final student={
-        'sam':30,
-         'samit':40,
-         'sabi':50,
-         'sabin':60,
+    Map <String , int >student={
+        'sa':30,
+        
     };
-    student.addAll(student);
-    print(student);
-    student.remove('sam');
+  List <Map<String,int>> students = [
+    {
+        'samip':30,
+        'sabin':40,
+        'sabina':50,
+        'sabina':60,
     
+    },
+    student,
+ 
+  ];
+    print(students);
+    students.map((e){
+        e.forEach((key, value) {
+            print('$key:$value');
+        });
+    });
+
+//    for (int i=0;i<=students.length;i++){
+//     print(students.keys.toList()[i]);
+//    }
+//students.forEach((key, value) => print('$key:$value'));
+
 }
 
 
