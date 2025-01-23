@@ -195,16 +195,16 @@ interface=no extends no with
 final=cannot inherite
 */
 
-void main(){
-    List <student /*object*/> students = [
-        student('samip',30),
-        student('samita',40),
-        student('sabin',50),
-        student('sabina',60),
-        student('sabina',60),
-    ];
-print((students));
-print(students.toSet());
+// void main(){
+//     List <student /*object*/> students = [
+//         student('samip',30),
+//         student('samita',40),
+//         student('sabin',50),
+//         student('sabina',60),
+//         student('sabina',60),
+//     ];
+// print((students));
+// print(students.toSet());
     // List <student>stud =[];
     // for (var i=0;i<students.length;i++){
     //     if (students[i].marks>=40){
@@ -219,15 +219,38 @@ print(students.toSet());
     //     }
     // }
 
-   var stud= students.where((student) => student.marks>=40).toList();
-   print(stud);
+//    var stud= students.where((student) => student.marks>=40).toList();
+//    print(stud);
+// }
+// class student{
+//     String name;
+//     int marks;
+//     student(this.name,this.marks);
+//     String toString()=>'student=$name';
+// }
+
+void main(){
+    
+   Map< String, int> students={
+         'samip':30,
+         'samita':40,
+         'sabin':50,
+         'sabina':60,
+         
+   };
+    print(students['samip']);
+    final student={
+        'sam':30,
+         'samit':40,
+         'sabi':50,
+         'sabin':60,
+    };
+    student.addAll(student);
+    print(student);
+    student.remove('sam');
+    
 }
-class student{
-    String name;
-    int marks;
-    student(this.name,this.marks);
-    String toString()=>'student=$name';
-}
+
 
 
 
