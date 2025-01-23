@@ -201,8 +201,10 @@ void main(){
         student('samita',40),
         student('sabin',50),
         student('sabina',60),
+        student('sabina',60),
     ];
 print((students));
+print(students.toSet());
     // List <student>stud =[];
     // for (var i=0;i<students.length;i++){
     //     if (students[i].marks>=40){
@@ -211,9 +213,14 @@ print((students));
     //     }
     // }
     //print(stud);
-  
-  var stud=students.where ((student)=>student.marks>=40);
-    print(stud);
+    // for (var student in students){
+    //     if (student.marks>=40){
+    //         print(student);
+    //     }
+    // }
+
+   var stud= students.where((student) => student.marks>=40).toList();
+   print(stud);
 }
 class student{
     String name;
