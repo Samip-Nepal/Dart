@@ -261,40 +261,52 @@ final=cannot inherite
 
 // }
 
-enum OrderStatus {
-  pending,
-  shipped,
-  delivered,
-  cancelled,
-}
+// enum OrderStatus {
+//   pending,
+//   shipped,
+//   delivered,
+//   cancelled,
+// }
 
 
-void printOrderMessage(OrderStatus status) {
-  switch (status) {
-    case OrderStatus.pending:
-      print("Your order is pending.");
-      break;
-    case OrderStatus.shipped:
-      print("Your order has been shipped!");
-      break;
-    case OrderStatus.delivered:
-      print("Your order has been delivered.");
-      break;
-    case OrderStatus.cancelled:
-      print("Your order was cancelled.");
-      break;
-  }
-}
+// void printOrderMessage(OrderStatus status) {
+//   switch (status) {
+//     case OrderStatus.pending:
+//       print("Your order is pending.");
+//       break;
+//     case OrderStatus.shipped:
+//       print("Your order has been shipped!");
+//       break;
+//     case OrderStatus.delivered:
+//       print("Your order has been delivered.");
+//       break;
+//     case OrderStatus.cancelled:
+//       print("Your order was cancelled.");
+//       break;
+//   }
+// }
 
-void main() {
+// void main() {
   
-  OrderStatus currentStatus = OrderStatus.shipped;
-  printOrderMessage(currentStatus);
+//   OrderStatus currentStatus = OrderStatus.shipped;
+//   printOrderMessage(currentStatus);
 
  
-  for (var status in OrderStatus.values) {
-    print("Order status: $status");
+//   for (var status in OrderStatus.values) {
+//     print("Order status: $status");
+//   }
+// }
+
+void main(){
+  try{
+    int hello=10;
+    print(hello/0);
+  }catch(e){
+    print("Something went wrong");
+  }finally{{
+    print("This is finally block");
   }
+}
 }
 
 
