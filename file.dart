@@ -229,37 +229,74 @@ final=cannot inherite
 //     String toString()=>'student=$name';
 // }
 
-import 'dart:math';
+// import 'dart:math';
 
-void main(){
-    Map <String , int >student={
-        'sa':30,
+// void main(){
+//     Map <String , int >student={
+//         'sa':30,
         
-    };
-  List <Map<String,int>> students = [
-    {
-        'samip':30,
-        'sabin':40,
-        'sabina':50,
-        'sabina':60,
+//     };
+//   List <Map<String,int>> students = [
+//     {
+//         'samip':30,
+//         'sabin':40,
+//         'sabina':50,
+//         'sabina':60,
     
-    },
-    student,
+//     },
+//     student,
  
-  ];
-    print(students);
-    students.map((e){
-        e.forEach((key, value) {
-            print('$key:$value');
-        });
-    });
+//   ];
+//     print(students);
+//     students.map((e){
+//         e.forEach((key, value) {
+//             print('$key:$value');
+//         });
+//     });
 
-//    for (int i=0;i<=students.length;i++){
-//     print(students.keys.toList()[i]);
-//    }
-//students.forEach((key, value) => print('$key:$value'));
+// //    for (int i=0;i<=students.length;i++){
+// //     print(students.keys.toList()[i]);
+// //    }
+// //students.forEach((key, value) => print('$key:$value'));
 
+// }
+
+enum OrderStatus {
+  pending,
+  shipped,
+  delivered,
+  cancelled,
 }
+
+
+void printOrderMessage(OrderStatus status) {
+  switch (status) {
+    case OrderStatus.pending:
+      print("Your order is pending.");
+      break;
+    case OrderStatus.shipped:
+      print("Your order has been shipped!");
+      break;
+    case OrderStatus.delivered:
+      print("Your order has been delivered.");
+      break;
+    case OrderStatus.cancelled:
+      print("Your order was cancelled.");
+      break;
+  }
+}
+
+void main() {
+  
+  OrderStatus currentStatus = OrderStatus.shipped;
+  printOrderMessage(currentStatus);
+
+ 
+  for (var status in OrderStatus.values) {
+    print("Order status: $status");
+  }
+}
+
 
 
 
