@@ -297,17 +297,38 @@ final=cannot inherite
 //   }
 // }
 
-void main(){
-  try{
-    int hello=10;
-    print(hello/0);
-  }catch(e){
-    print("Something went wrong");
-  }finally{{
-    print("This is finally block");
-  }
+// void main(){
+//   try{
+//     int hello=10;
+//     print(hello/0);
+//   } //on IntegerDivisionByZeroException{
+//    // print("Cannot divide by zero");
+//    catch(e){
+//     print("Something went wrong");
+//   }finally{{
+//     print("This is finally block");
+//   }
+// }
+// }
+void main() async{
+  print('start');
+  print(await dealayafter2sec());
+  print('end');
 }
+
+Future<String> dealayafter2sec() async{
+return Future.delayed(Duration(seconds:2), (){
+  return 'hello';
+});
 }
+
+
+
+
+
+
+
+
 
 
 
