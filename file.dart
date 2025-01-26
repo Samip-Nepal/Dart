@@ -334,22 +334,9 @@ final=cannot inherite
 // }
 // }
 
-void main()async{
-//print( await countdata().first);
-countdata().listen((event) {
-  print(event);
-});
-}
 
 
 
- Stream countdata()async*{
-  for(int i =0;i<=5;i++){
-   
-    yield(i);
-     await Future.delayed( Duration (seconds:1));
-  }
- }
 
 
 
