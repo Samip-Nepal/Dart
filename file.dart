@@ -310,17 +310,46 @@ final=cannot inherite
 //   }
 // }
 // }
-void main() async{
-  print('start');
-  print(await dealayafter2sec());
-  print('end');
-}
+// void main() async{
+//   print('start');
+//   print(await dealayafter2sec());
+//   print('end');
+// }
 
-Future<String> dealayafter2sec() async{
-return Future.delayed(Duration(seconds:2), (){
-  return 'hello';
+// Future<String> dealayafter2sec() async{
+// return Future.delayed(Duration(seconds:2), (){
+//   return 'hello';
+// });
+// }
+
+// import 'package:http/http.dart' as http;
+// import 'dart:convert ';
+// void main() async{
+// var  url = Uri.parse('https://jsonplaceholder.typicode.com', 'users1');
+// try{
+//   var response = await http.get(url);
+//   print(jsonDecode(response.body));
+// }catch(e){
+//   print('error');
+// }
+// }
+
+void main()async{
+//print( await countdata().first);
+countdata().listen((event) {
+  print(event);
 });
 }
+
+
+
+ Stream countdata()async*{
+  for(int i =0;i<=5;i++){
+   
+    yield(i);
+     await Future.delayed( Duration (seconds:1));
+  }
+ }
 
 
 
