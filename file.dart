@@ -334,11 +334,68 @@ final=cannot inherite
 // }
 // }
 
+// void main()async{
+// //print( await countdata().first);
+// countdata().listen((event) {
+//   print(event);
+// });
+// }
 
 
 
+//  Stream countdata()async*{
+//   for(int i =0;i<=5;i++){
+   
+//     yield(i);
+//      await Future.delayed( Duration (seconds:1));
+//   }
+//  }
+
+// import 'dart:async';
+
+// void countdown() {
+//   final controller = StreamController<int>();
+//   controller.sink.add(5);
+//   controller.sink.add(4);
+//   controller.sink.add(3);
+//   controller.sink.add(2);
+//   controller.sink.close();
+
+//   controller.stream.listen((event) {
+//     print(event);
+//   }, onError: (error) {
+//     print('error: $error');
+//   }, onDone: () {
+//     print('Stream closed');
+//   });
+// }
+
+// void main() {
+//   countdown();
+// }
 
 
+void main(){
+    final json={
+"id": 1,
+"name": "Leanne Graham",
+"username": "Bret",
+"email": "Sincere@april.biz",
+};
+// if (json case {"username":String username,'Id':int Id}){
+//     print(username);
+//     print(Id);  
+
+// }
+switch(json){
+    case {"username":String username,'Id':int Id}:
+    print(username);
+    print(Id);
+    break;
+    default:
+    print('not found');
+}
+}
 
 
 
